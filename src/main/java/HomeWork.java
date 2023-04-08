@@ -11,6 +11,7 @@ public class HomeWork {
      */
     public static void main(String[] args) {
         Deque<String> deq = Methods.workOfDeque("print", "revert", "exit");
+        // Вывод в соответствии с порядком заполнения
         deq.descendingIterator().forEachRemaining(x -> System.out.print(x + " "));
     }
 }
