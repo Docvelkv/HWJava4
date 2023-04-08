@@ -16,19 +16,20 @@ public class Methods {
     public static Deque<String> workOfDeque(String print, String delLast, String stop) {
         Deque<String> arrDeq = new ArrayDeque<>();
         Scanner scan = new Scanner(System.in);
-        boolean flag = true;
-        while (flag) {
+        while (true) {
             System.out.print("Введите строку: ");
             String str = scan.nextLine();
-            if (str.equals(print)) {
+            if (print.equals(str)) {
                 arrDeq.forEach(x -> System.out.print(x + " "));
                 System.out.println();
+                continue;
             }
-            if (str.equals(delLast)) {
+            if (delLast.equals(str)) {
                 arrDeq.removeFirst();
+                continue;
             }
-            if (str.equals(stop)) {
-                flag = false;
+            if (stop.equals(str)) {
+                break;
             }
             else {
                 arrDeq.addFirst(str);
